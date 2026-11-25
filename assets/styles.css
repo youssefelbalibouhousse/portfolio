@@ -1248,6 +1248,70 @@ kbd {
   text-wrap: pretty;
 }
 
+/* ── Parcours : groupes, postes, missions ──────────────────────────────── */
+.cv__title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 20px;
+  font: 600 11px/1 var(--font-mono);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--em-bright);
+}
+
+.cv__title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--em-a35), transparent 80%);
+}
+
+.cv__group { margin-bottom: 36px; }
+.cv__group--last { margin-bottom: 0; }
+.cv__group li:last-child { padding-bottom: 0; }
+
+.exp__org {
+  margin: 0 0 8px;
+  font: 500 11.8px/1.55 var(--font-mono);
+  letter-spacing: .03em;
+  color: var(--gold);
+  text-wrap: pretty;
+}
+
+.exp__list {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exp__list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13.6px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.exp__list li::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: .6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 1.5px;
+  background: var(--em);
+  transform: rotate(45deg);
+}
+
+.exp__list strong { color: var(--ink-fort); font-weight: 600; }
+
+.hero__lead strong { color: var(--ink-fort); font-weight: 600; }
+
 /* ── FAQ ───────────────────────────────────────────────────────────────── */
 .faq {
   display: grid;
