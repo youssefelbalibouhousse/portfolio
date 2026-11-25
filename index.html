@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#06110B">
+<title>Youssef El Balibouhousse — Développeur full-stack &amp; IA locale</title>
+<meta name="description" content="Portfolio de Youssef El Balibouhousse : RAG arabe 100 % local, audit de conformité par LLM, encodage audio en Rust, planificateur de bureau. Cinq projets livrés, testés et documentés.">
+<meta name="author" content="Youssef El Balibouhousse">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Youssef El Balibouhousse — Développeur full-stack & IA locale">
+<meta property="og:description" content="Des systèmes qui font tourner l'IA chez vous : RAG arabe local, audit Excel par LLM, Rust en flux, Spring Boot.">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2306110B'/%3E%3Cpath d='M18 18l14 16 14-16M32 34v14' stroke='%233BE294' stroke-width='7' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<a class="skip" href="#projets">Aller aux projets</a>
+
+<!-- Bandeau d'annonce : modifier le texte ou retirer le bloc -->
+<div class="bar">
+  <div class="bar__inner">
+    <p class="bar__msg">
+      <span class="bar__dot" aria-hidden="true"></span>
+      Disponible pour un poste de développeur full-stack — réponse sous 24&nbsp;h.
+    </p>
+    <a class="btn btn--sm btn--dark bar__cta" href="#contact">Me contacter</a>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top" aria-label="Youssef El Balibouhousse — accueil">
+      <span class="brand__mark" aria-hidden="true">Y</span>
+      <span class="brand__txt">Youssef<em>El Balibouhousse</em></span>
+    </a>
+
+    <nav class="nav__links" id="menu" aria-label="Navigation principale">
+      <a href="#projets">Projets</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#methode">Méthode</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--sm btn--ghost" href="https://github.com/youssefelbalibouhousse" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn--sm btn--em" href="#contact">Travaillons ensemble</a>
+    </div>
+
+    <button class="nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__stage" aria-hidden="true"></div>
+    <div class="hero__grid">
+
+      <div class="hero__copy">
+        <p class="eyebrow eyebrow--em" data-reveal>
+          <span class="dot" aria-hidden="true"></span>
+          Développeur full-stack · IA locale
+        </p>
+
+        <h1 class="hero__title" data-reveal style="--d:60ms">
+          Je fais tourner<br><span class="grad">l’IA chez vous.</span>
+        </h1>
+
+        <p class="hero__lead" data-reveal style="--d:120ms">
+          RAG arabe 100&nbsp;% local, audit de conformité par LLM, encodage audio en Rust&nbsp;:
+          des produits complets, de l’architecture au dernier test.
+        </p>
+
+        <p class="hero__sub" data-reveal style="--d:180ms">
+          Cinq projets livrés en 2026, du prototype Python au service Spring&nbsp;Boot.
+          Je conçois, je code, je mesure, je documente.
+        </p>
+
+        <div class="hero__actions" data-reveal style="--d:240ms">
+          <a class="btn btn--lg btn--em btn--pulse" href="#projets">Voir les 5 projets</a>
+          <a class="btn btn--lg btn--glass" href="#contact">Me contacter</a>
+        </div>
+
+        <ul class="hero__facts" data-reveal style="--d:300ms">
+          <li>5 projets livrés</li>
+          <li>Zéro donnée envoyée à un tiers</li>
+          <li>Python · Java · Rust</li>
+          <li>Tests &amp; CI</li>
+        </ul>
+      </div>
+
+      <div class="hero__panel" data-reveal style="--d:200ms">
+        <div class="term" role="img" aria-label="Exemple de session : statut de l’index, puis réponse citée d’un document">
+          <div class="term__bar">
+            <span class="term__dot" aria-hidden="true"></span>
+            <span class="term__dot" aria-hidden="true"></span>
+            <span class="term__dot" aria-hidden="true"></span>
+            <span class="term__name">localarabi_rag — ollama</span>
+          </div>
+          <pre class="term__body"><code><span class="c-dim">$</span> python scripts/build_kb.py --status
+<span class="c-em">→</span> 3 documents · 412 chunks · à jour
+
+<span class="c-dim">$</span> curl -s localhost:8000/ask \
+    -d '{"q":"ما حكم صلاة الجماعة؟"}'
+
+<span class="c-gold">{</span> "reponse": "…",
+  "sources": [
+    { "fichier": "boukhari.epub",
+      "page": 42, "lignes": <span class="c-em">"118-124"</span> }
+  ]
+<span class="c-gold">}</span>
+
+<span class="c-dim"># 0 requête sortie de la machine</span></code></pre>
+        </div>
+
+        <div class="hero__badges">
+          <span class="chip">FastAPI</span>
+          <span class="chip">ChromaDB</span>
+          <span class="chip">Ollama</span>
+          <span class="chip">Spring AI</span>
+          <span class="chip">Tauri</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>RAG local · bge-m3</span><span class="sep">◆</span>
+      <span>Spring AI structured output</span><span class="sep">◆</span>
+      <span>Rust en flux</span><span class="sep">◆</span>
+      <span>ChromaDB</span><span class="sep">◆</span>
+      <span>Apache POI</span><span class="sep">◆</span>
+      <span>CustomTkinter</span><span class="sep">◆</span>
+      <span>Tesseract OCR</span><span class="sep">◆</span>
+      <span>Docker multi-étapes</span><span class="sep">◆</span>
+      <span>JWT · rate limiting</span><span class="sep">◆</span>
+      <span>hit@k · MRR</span><span class="sep">◆</span>
+      <span>RAG local · bge-m3</span><span class="sep">◆</span>
+      <span>Spring AI structured output</span><span class="sep">◆</span>
+      <span>Rust en flux</span><span class="sep">◆</span>
+      <span>ChromaDB</span><span class="sep">◆</span>
+      <span>Apache POI</span><span class="sep">◆</span>
+      <span>CustomTkinter</span><span class="sep">◆</span>
+      <span>Tesseract OCR</span><span class="sep">◆</span>
+      <span>Docker multi-étapes</span><span class="sep">◆</span>
+      <span>JWT · rate limiting</span><span class="sep">◆</span>
+      <span>hit@k · MRR</span><span class="sep">◆</span>
+    </div>
+  </div>
+
+  <section class="sec sec--tight" id="preuve">
+    <div class="wrap">
+      <div class="manifest" data-reveal>
+        <p class="eyebrow eyebrow--or"><span class="dot" aria-hidden="true"></span>La règle que je ne casse pas</p>
+        <h2 class="h2">Un projet livré, c’est un projet qu’on peut lancer, tester et relire six mois plus tard.</h2>
+        <p class="lead">
+          Pas de démo qui ne compile plus. Pas de script magique sans README. Chaque dépôt contient
+          ses tests, sa configuration, ses limites connues — et la commande exacte pour le démarrer.
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat" data-reveal style="--d:0ms">
+          <span class="stat__num">5</span>
+          <span class="stat__lbl">projets épinglés, tous fonctionnels</span>
+        </div>
+        <div class="stat" data-reveal style="--d:80ms">
+          <span class="stat__num">4</span>
+          <span class="stat__lbl">écosystèmes : Python, Java, Rust, TypeScript</span>
+        </div>
+        <div class="stat" data-reveal style="--d:160ms">
+          <span class="stat__num">100&nbsp;%</span>
+          <span class="stat__lbl">local par défaut — aucun document chez un tiers</span>
+        </div>
+        <div class="stat" data-reveal style="--d:240ms">
+          <span class="stat__num">0</span>
+          <span class="stat__lbl">clé API nécessaire pour faire tourner la démo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="projets">
+    <div class="wrap">
+      <header class="sec__head" data-reveal>
+        <p class="eyebrow eyebrow--em"><span class="dot" aria-hidden="true"></span>Projets épinglés</p>
+        <h2 class="h2">Cinq produits, cinq problèmes réels.</h2>
+        <p class="lead">
+          Un corpus arabe qui doit citer ses pages. Un rapport Excel qui doit être audité sans
+          envoyer les données d’un client. Un enregistrement de trois heures qui doit tenir dans
+          un téléphone. Chaque projet part d’une contrainte, pas d’une envie de framework.
+        </p>
+      </header>
+
+      <div class="projects">
+
+        <article class="project project--featured" data-spotlight data-reveal>
+          <div class="project__main">
+            <p class="project__meta">
+              <span class="tag tag--em">01 · IA / RAG</span>
+              <span class="project__year">2026</span>
+            </p>
+            <h3 class="project__title">LocalArabi_RAG</h3>
+            <p class="project__desc">
+              Chatbot de questions-réponses en arabe sur des documents PDF et EPUB. Chaque réponse
+              cite son fichier, sa page et son intervalle de lignes — et rien ne quitte la machine.
+            </p>
+            <ul class="project__list">
+              <li><strong>Citations vérifiables</strong> — fichier, page imprimée et lignes, pour retrouver le passage dans l’exemplaire du lecteur.</li>
+              <li><strong>Récupération hybride</strong> — BM25 lexical fusionné aux vecteurs <code>bge-m3</code>, parce qu’un nom propre arabe ne se retrouve pas par similarité seule.</li>
+              <li><strong>Ingestion incrémentale non destructive</strong> — empreintes SHA-256, remplacement par document, orphelins signalés par <code>--status</code>.</li>
+              <li><strong>Mesure avant croyance</strong> — jeu d’or versionné, <code>hit@k</code> et MRR, contrôle de fidélité de la réponse au contexte.</li>
+            </ul>
+            <div class="project__foot">
+              <ul class="stack">
+                <li>Python</li><li>FastAPI</li><li>ChromaDB</li><li>Ollama</li><li>Tailwind RTL</li><li>Docker</li><li>pytest</li>
+              </ul>
+              <a class="btn btn--sm btn--em" href="https://github.com/youssefelbalibouhousse/LocalArabi_RAG" target="_blank" rel="noopener">
+                Voir le dépôt
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <aside class="project__aside">
+            <div class="mini">
+              <p class="mini__lbl">Pipeline</p>
+              <ol class="pipe">
+                <li>PDF / EPUB</li>
+                <li>Chunks + registre</li>
+                <li>BM25 + bge-m3</li>
+                <li>llama3.1</li>
+                <li>Réponse citée</li>
+              </ol>
+            </div>
+            <div class="mini mini--gold">
+              <p class="mini__lbl">Sécurité</p>
+              <p class="mini__txt">JWT, hachage des mots de passe, limitation de débit à fenêtre glissante, restitution en RTL.</p>
+            </div>
+          </aside>
+        </article>
+
+        <article class="project" data-spotlight data-reveal>
+          <div class="project__main">
+            <p class="project__meta">
+              <span class="tag tag--em">02 · Desktop Python</span>
+              <span class="project__year">2026</span>
+            </p>
+            <h3 class="project__title">NeuroPlanner</h3>
+            <p class="project__desc">
+              Application de bureau pour tenir un rythme d’apprentissage de 5&nbsp;h par jour, fondée
+              sur la neuroplasticité : répétition espacée, récupération active, charge cognitive.
+            </p>
+            <ul class="project__list">
+              <li><strong>Planning entièrement éditable</strong> — domaines, tâches et durées, avec aperçu avant d’appliquer un import.</li>
+              <li><strong>Import de programme par LLM</strong> — local via Ollama ou hébergé au palier gratuit (Groq, Gemini, Mistral), au choix de l’utilisateur.</li>
+              <li><strong>Persistance immédiate</strong> — chaque coche est écrite sur disque au clic, jamais à la fermeture.</li>
+              <li><strong>Détails d’ergonomie</strong> — actions ancrées en bas de la barre latérale même sur écran bas, <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>6</kbd> pour changer de jour.</li>
+            </ul>
+            <div class="project__foot">
+              <ul class="stack">
+                <li>Python</li><li>CustomTkinter</li><li>Matplotlib</li><li>Ollama</li><li>pytest</li>
+              </ul>
+              <a class="btn btn--sm btn--glass" href="https://github.com/youssefelbalibouhousse/NeuroPlanner" target="_blank" rel="noopener">
+                Voir le dépôt
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+          <aside class="project__aside">
+            <figure class="shot">
+              <button class="shot__btn" type="button" data-zoom="assets/img/screenshot.png"
+                      aria-label="Agrandir la capture d’écran de NeuroPlanner">
+                <img src="assets/img/screenshot.png"
+                     alt="Fenêtre de NeuroPlanner : navigation des jours, blocs horaires et checklists cochées"
+                     width="1240" height="860" loading="lazy" decoding="async">
+                <span class="shot__hint" aria-hidden="true">
+                  <svg class="ico" viewBox="0 0 24 24"><path d="M4 9V5a1 1 0 0 1 1-1h4M20 9V5a1 1 0 0 0-1-1h-4M4 15v4a1 1 0 0 0 1 1h4M20 15v4a1 1 0 0 1-1 1h-4"/></svg>
+                  Agrandir
+                </span>
+              </button>
+              <figcaption>Capture réelle de l’application — navigation Lundi → Samedi, quatre blocs horaires, progression par pilier.</figcaption>
+            </figure>
+            <div class="mini">
+              <p class="mini__lbl">Une journée</p>
+              <ol class="pipe">
+                <li>Rappel de la veille</li>
+                <li>4 blocs · 07:30→14:30</li>
+                <li>Focus 45 min</li>
+                <li>Feuille blanche 3 min</li>
+              </ol>
+            </div>
+          </aside>
+        </article>
+
+        <article class="project" data-spotlight data-reveal>
+          <div class="project__main">
+            <p class="project__meta">
+              <span class="tag tag--em">03 · Desktop Rust</span>
+              <span class="project__year">2026</span>
+            </p>
+            <h3 class="project__title">SilenceLess</h3>
+            <p class="project__desc">
+              Retire les silences d’un enregistrement de conférence et exporte en MP3 — en flux,
+              avec une mémoire bornée à environ 7&nbsp;Mo même sur plusieurs heures d’audio.
+            </p>
+            <ul class="project__list">
+              <li><strong>Détection par seuil RMS (dBFS)</strong> — fenêtre glissante et pas configurables, marge de silence conservée pour ne pas couper les mots.</li>
+              <li><strong>Traitement en parallèle</strong> — plusieurs fichiers à la fois, coupe optionnelle des silences internes, bitrate LAME réglable.</li>
+              <li><strong>Trois interfaces, un algorithme</strong> — application Tauri, CLI Rust et prototype Python de référence pour valider les résultats.</li>
+              <li><strong>Parité vérifiée</strong> — les tests comparent le rendu en flux au rendu mémoire, pas seulement la sortie.</li>
+            </ul>
+            <div class="project__foot">
+              <ul class="stack">
+                <li>Rust</li><li>Tauri</li><li>LAME</li><li>Cargo workspace</li><li>Python</li>
+              </ul>
+              <a class="btn btn--sm btn--glass" href="https://github.com/youssefelbalibouhousse/SilenceLess" target="_blank" rel="noopener">
+                Voir le dépôt
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+          <aside class="project__aside">
+            <figure class="shot">
+              <div class="shot__frame">
+                <img src="assets/img/silence-wave.svg"
+                     alt="Forme d’onde : trois zones de silence repérées entre les segments de parole"
+                     width="660" height="150" loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <ul class="legend">
+                  <li><span class="legend__dot legend__dot--em"></span>parole conservée</li>
+                  <li><span class="legend__dot legend__dot--s"></span>silence retiré</li>
+                  <li><span class="legend__dot legend__dot--or"></span>marge anti-coupure</li>
+                </ul>
+              </figcaption>
+            </figure>
+            <div class="mini">
+              <p class="mini__lbl">Contrainte</p>
+              <p class="mini__txt"><strong>~7 Mo de RAM</strong> sur un fichier de 3&nbsp;h. Le fichier n’est jamais chargé en entier : lecture, détection et encodage avancent ensemble.</p>
+            </div>
+            <div class="mini mini--gold">
+              <p class="mini__lbl">Licence</p>
+              <p class="mini__txt">Propriétaire — tous droits réservés. Le dépôt sert de vitrine technique.</p>
+            </div>
+          </aside>
+        </article>
+
+        <article class="project" data-spotlight data-reveal>
+          <div class="project__main">
+            <p class="project__meta">
+              <span class="tag tag--em">04 · Backend Java</span>
+              <span class="project__year">2026</span>
+            </p>
+            <h3 class="project__title">ARChecker</h3>
+            <p class="project__desc">
+              API qui reçoit un rapport de conformité Excel, l’aplatit en JSON, l’envoie à un LLM
+              local avec le référentiel du client et renvoie un verdict strictement structuré.
+            </p>
+            <ul class="project__list">
+              <li><strong>Structured Output</strong> — <code>.entity(AuditResultDTO.class)</code> via Spring AI&nbsp;: le LLM remplit un contrat, on ne parse pas du texte libre.</li>
+              <li><strong>Extraction exhaustive</strong> — tous les onglets, toutes les lignes via Apache POI, avant toute décision.</li>
+              <li><strong>Référentiel par client</strong> — <code>rulebook.json</code> injecté dans le prompt, donc une même API sert plusieurs normes qualité.</li>
+              <li><strong>Erreurs normalisées</strong> — 400 requête invalide, 404 client inconnu, 502 LLM injoignable, 500 interne. Documenté par Swagger/OpenAPI.</li>
+            </ul>
+            <div class="project__foot">
+              <ul class="stack">
+                <li>Java 21</li><li>Spring Boot 3.4</li><li>Spring AI</li><li>Apache POI</li><li>Maven</li><li>Ollama</li>
+              </ul>
+              <a class="btn btn--sm btn--glass" href="https://github.com/youssefelbalibouhousse/ARChecker" target="_blank" rel="noopener">
+                Voir le dépôt
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+          <aside class="project__aside">
+            <div class="mini">
+              <p class="mini__lbl">Contrat de sortie</p>
+              <pre class="mini__code"><code>{
+  "conforme": <span class="c-gold">false</span>,
+  "anomalies": [ <span class="c-em">"…"</span> ],
+  "commentaire": <span class="c-em">"…"</span>
+}</code></pre>
+            </div>
+          </aside>
+        </article>
+
+        <article class="project" data-spotlight data-reveal>
+          <div class="project__main">
+            <p class="project__meta">
+              <span class="tag tag--em">05 · Robotique / Vision</span>
+              <span class="project__year">2024</span>
+            </p>
+            <h3 class="project__title">DroneApp</h3>
+            <p class="project__desc">
+              Pilotage clavier temps réel d’un Tello, capture d’images et reconstruction d’une carte
+              2D de la trajectoire à partir de la vitesse et du cap.
+            </p>
+            <ul class="project__list">
+              <li><strong>Boucle de contrôle</strong> — commandes RC continues à cycle de 250&nbsp;ms, décollage, atterrissage et figures au clavier.</li>
+              <li><strong>Cartographie par intégration</strong> — position estimée en accumulant <code>cos</code>/<code>sin</code> du lacet, trajectoire et position courante dessinées en OpenCV.</li>
+              <li><strong>Lecture de scène</strong> — flux vidéo en direct, niveau de batterie, détection de texte Tesseract avec boîtes englobantes.</li>
+              <li><strong>Matériel réel</strong> — contraintes de latence et de portée, pas de simulation.</li>
+            </ul>
+            <div class="project__foot">
+              <ul class="stack">
+                <li>Python</li><li>djitellopy</li><li>OpenCV</li><li>NumPy</li><li>Tesseract</li>
+              </ul>
+              <a class="btn btn--sm btn--glass" href="https://github.com/youssefelbalibouhousse/DroneApp" target="_blank" rel="noopener">
+                Voir le dépôt
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+          <aside class="project__aside">
+            <div class="mini">
+              <p class="mini__lbl">Boucle</p>
+              <ol class="pipe">
+                <li>Clavier</li>
+                <li>send_rc_control</li>
+                <li>Intégration x/y</li>
+                <li>Carte OpenCV</li>
+              </ol>
+            </div>
+          </aside>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="expertise">
+    <div class="wrap">
+      <header class="sec__head" data-reveal>
+        <p class="eyebrow eyebrow--em"><span class="dot" aria-hidden="true"></span>Expertise</p>
+        <h2 class="h2">Ce que je sais faire sans qu’on m’explique.</h2>
+        <p class="lead">Quatre terrains que je pratique en production, pas en tutoriel.</p>
+      </header>
+
+      <div class="cards">
+        <article class="card" data-spotlight data-reveal style="--d:0ms">
+          <span class="card__num">01</span>
+          <h3>IA locale, d’abord</h3>
+          <p>Ollama, <code>bge-m3</code>, Llama&nbsp;3.1, Spring AI. Un corpus sensible ne sort pas de la machine, et le coût d’exploitation reste à zéro.</p>
+          <ul class="ticks">
+            <li>RAG, embeddings, récupération hybride</li>
+            <li>Structured output, garde-fous</li>
+            <li>Évaluation : hit@k, MRR, fidélité</li>
+          </ul>
+        </article>
+
+        <article class="card" data-spotlight data-reveal style="--d:80ms">
+          <span class="card__num">02</span>
+          <h3>Backends qui tiennent</h3>
+          <p>API FastAPI et Spring Boot avec authentification, limitation de débit, erreurs normalisées et documentation OpenAPI générée.</p>
+          <ul class="ticks">
+            <li>JWT, hachage, fenêtre glissante</li>
+            <li>Contrats typés, DTO, validation</li>
+            <li>Docker multi-étapes</li>
+          </ul>
+        </article>
+
+        <article class="card" data-spotlight data-reveal style="--d:160ms">
+          <span class="card__num">03</span>
+          <h3>Desktop &amp; systèmes</h3>
+          <p>Rust, Tauri, CustomTkinter. Traitement en flux, mémoire bornée, interfaces qui restent utilisables sur un écran bas.</p>
+          <ul class="ticks">
+            <li>Cargo workspace, tests de parité</li>
+            <li>Traitement parallèle par lot</li>
+            <li>Persistance immédiate, sans perte</li>
+          </ul>
+        </article>
+
+        <article class="card" data-spotlight data-reveal style="--d:240ms">
+          <span class="card__num">04</span>
+          <h3>Mesurer plutôt que supposer</h3>
+          <p>Jeu d’or versionné, benchmarks d’embeddings avant de payer, CI GitHub Actions. Une décision se prend sur un chiffre, pas sur une impression.</p>
+          <ul class="ticks">
+            <li>pytest, cargo test, JUnit</li>
+            <li>Rapports de mesure reproductibles</li>
+            <li>Documentation des limites connues</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="methode">
+    <div class="wrap">
+      <header class="sec__head" data-reveal>
+        <p class="eyebrow eyebrow--or"><span class="dot" aria-hidden="true"></span>Méthode</p>
+        <h2 class="h2">Quatre étapes, toujours dans cet ordre.</h2>
+        <p class="lead">Le code arrive en deuxième position. Avant, il y a la contrainte, et après, la preuve.</p>
+      </header>
+
+      <ol class="steps">
+        <li class="step" data-reveal style="--d:0ms">
+          <span class="step__n">01</span>
+          <h3>Cadrer la contrainte</h3>
+          <p>Où vit la donnée, qui la lit, quel volume, quelle tolérance à l’erreur. C’est là que se décide l’architecture — et souvent le refus du cloud.</p>
+        </li>
+        <li class="step" data-reveal style="--d:80ms">
+          <span class="step__n">02</span>
+          <h3>Construire le chemin critique</h3>
+          <p>Une version qui fait le travail de bout en bout, même imparfaite, avant toute optimisation. Puis les cas limites, puis l’interface.</p>
+        </li>
+        <li class="step" data-reveal style="--d:160ms">
+          <span class="step__n">03</span>
+          <h3>Mesurer</h3>
+          <p>Tests, jeu d’or, benchmark. Si je ne sais pas dire combien, je ne sais pas si c’est bon. Les rapports sont versionnés ou reproductibles.</p>
+        </li>
+        <li class="step" data-reveal style="--d:240ms">
+          <span class="step__n">04</span>
+          <h3>Documenter les limites</h3>
+          <p>Ce qui marche, ce qui ne marche pas encore, ce qui dépend d’un modèle externe. Un README honnête vaut mieux qu’une démo flatteuse.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="parcours">
+    <div class="wrap wrap--narrow">
+      <header class="sec__head" data-reveal>
+        <p class="eyebrow eyebrow--em"><span class="dot" aria-hidden="true"></span>Parcours</p>
+        <h2 class="h2">Cinq ans à empiler des projets, pas des tutoriels.</h2>
+      </header>
+
+      <ol class="timeline">
+        <li data-reveal>
+          <span class="timeline__year">2021</span>
+          <div>
+            <h3>Premiers programmes, premiers objets</h3>
+            <p>Java (TicTacToe, MaBanque), Python et pilotage d’un drone Tello avec <code>djitellopy</code>.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="timeline__year">2022</span>
+          <div>
+            <h3>BTS SIO — Java, PHP, TypeScript, Flutter</h3>
+            <p>Application GSB en Java puis en PHP, projet web en TypeScript, découverte du mobile avec Flutter.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="timeline__year">2023</span>
+          <div>
+            <h3>Spring en profondeur</h3>
+            <p>Projet Spring&nbsp;6 : injection, MVC, persistance, tests. Le socle qui servira deux ans plus tard à ARChecker.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="timeline__year">2024</span>
+          <div>
+            <h3>DroneApp</h3>
+            <p>Contrôle temps réel, cartographie par intégration et lecture de scène sur matériel réel.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="timeline__year">2025</span>
+          <div>
+            <h3>Vers l’IA appliquée</h3>
+            <p>Premier RAG avec FastAPI, application de suivi d’habitudes en Java. Les briques du RAG arabe sont posées.</p>
+          </div>
+        </li>
+        <li class="timeline--now" data-reveal>
+          <span class="timeline__year">2026</span>
+          <div>
+            <h3>Quatre produits livrés</h3>
+            <p>LocalArabi_RAG, ARChecker, SilenceLess, NeuroPlanner — du local-first assumé, testé et documenté.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap wrap--narrow">
+      <header class="sec__head" data-reveal>
+        <p class="eyebrow eyebrow--or"><span class="dot" aria-hidden="true"></span>FAQ</p>
+        <h2 class="h2">Les questions qu’on me pose avant de commencer.</h2>
+      </header>
+
+      <div class="faq">
+        <details class="faq__item" data-reveal>
+          <summary>Pourquoi de l’IA locale plutôt que des API ?</summary>
+          <div class="faq__body"><p>Parce que les cas les plus intéressants sont ceux où la donnée ne peut pas sortir : un corpus sous droits, un rapport de conformité client, des enregistrements de conférence. Avec Ollama, le coût marginal est nul et la démonstration tourne chez celui qui l’installe, sans clé API.</p></div>
+        </details>
+
+        <details class="faq__item" data-reveal>
+          <summary>Les dépôts sont-ils réutilisables ?</summary>
+          <div class="faq__body"><p>Quatre le sont, avec leur README, leur configuration et leurs tests. SilenceLess est sous licence propriétaire : le dépôt sert de vitrine technique, pas de base de code à réutiliser.</p></div>
+        </details>
+
+        <details class="faq__item" data-reveal>
+          <summary>Quel est ton stack principal aujourd’hui ?</summary>
+          <div class="faq__body"><p>Python pour l’IA, FastAPI et les outils ; Java&nbsp;21 + Spring Boot quand il faut un backend typé et documenté ; Rust + Tauri quand il faut un exécutable léger et rapide. TypeScript et Tailwind pour les interfaces web.</p></div>
+        </details>
+
+        <details class="faq__item" data-reveal>
+          <summary>Tu peux reprendre un projet existant ?</summary>
+          <div class="faq__body"><p>Oui. Je commence par lire le code et lancer les tests avant de proposer quoi que ce soit. La première livraison d’une reprise, c’est souvent la commande qui permet de démarrer le projet — et le test qui échoue.</p></div>
+        </details>
+
+        <details class="faq__item" data-reveal>
+          <summary>Comment te contacter ?</summary>
+          <div class="faq__body"><p>Par GitHub pour le code et les détails techniques, ou via le bouton ci-dessous pour un échange rapide. Réponse sous 24&nbsp;h.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--cta" id="contact">
+    <div class="wrap wrap--narrow">
+      <div class="cta" data-reveal>
+        <p class="eyebrow eyebrow--em"><span class="dot" aria-hidden="true"></span>Prochaine étape</p>
+        <h2 class="cta__title">Et si on construisait le prochain&nbsp;?</h2>
+        <p class="lead">
+          Un poste, une mission, un projet à reprendre : dites-moi la contrainte,
+          je vous dis ce qui est réaliste — et ce qui ne l’est pas.
+        </p>
+
+        <div class="cta__actions">
+          <a class="btn btn--lg btn--em btn--pulse" href="https://www.linkedin.com/in/youssef-e-a24052228/" target="_blank" rel="noopener">
+            <svg class="ico ico--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+            Discuter sur LinkedIn
+          </a>
+          <a class="btn btn--lg btn--glass" href="https://github.com/youssefelbalibouhousse" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <ul class="cta__facts">
+          <li>Remote ou sur site</li>
+          <li>Disponible immédiatement</li>
+          <li>Français · Anglais</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <span class="brand__mark" aria-hidden="true">Y</span>
+        <div>
+          <p class="foot__name">Youssef El Balibouhousse</p>
+          <p class="foot__role">Développeur full-stack &amp; IA locale</p>
+        </div>
+      </div>
+      <nav class="foot__nav" aria-label="Liens de pied de page">
+        <a href="#projets">Projets</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#methode">Méthode</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/youssefelbalibouhousse" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/youssef-e-a24052228/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+    <div class="foot__bottom">
+      <p>© <span id="year">2026</span> Youssef El Balibouhousse</p>
+      <p class="foot__note">Site statique, sans tracker, sans requête inutile.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Capture d’écran agrandie">
+  <button class="lightbox__close" type="button" id="lightbox-close">
+    Fermer
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img id="lightbox-img" alt="Capture d’écran agrandie">
+</dialog>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
