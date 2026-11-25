@@ -711,6 +711,12 @@ kbd {
   text-wrap: pretty;
 }
 
+.stat__num small {
+  font-size: .42em;
+  letter-spacing: .02em;
+  margin-left: .1em;
+}
+
 /* ── Projets ───────────────────────────────────────────────────────────── */
 .projects {
   display: grid;
